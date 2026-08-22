@@ -1,5 +1,6 @@
-# Окружение uv
+# Окружение
 .venv/
+.idea/
 
 # Кэши Python
 __pycache__/
