@@ -1,10 +1,17 @@
 [project]
-name = "ss"
+name = "seed-service"
 version = "0.1.0"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = [
-    "fastapi[standart]>=0.141.1",
-    "psycopg[binary]>=3.3.6",
+    "fastapi",
+    "psycopg[binary]>=3.3.5",
     "pydantic-settings>=2.15.0",
-    "uvicorn>=0.53.0",
+    "uvicorn",
+]
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.13.1",
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
 ]
