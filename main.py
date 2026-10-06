@@ -1,5 +1,3 @@
-import os
-
 import psycopg
 from fastapi import FastAPI
 
