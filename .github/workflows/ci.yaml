@@ -30,6 +30,8 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v5
+      - name: Включить эмуляцию для мультиархитектурной сборки
+        uses: docker/setup-qemu-action@v3
       - name: Настроить сборщик Docker
         uses: docker/setup-buildx-action@v4
       - name: Вход в реестр GHCR
@@ -43,4 +45,5 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ghcr.io/evgpov/ss:latest
