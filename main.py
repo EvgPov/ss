@@ -21,3 +21,8 @@ def db_check():
     with psycopg.connect(settings.database_url) as conn:
         conn.execute("SELECT 1")
     return {"db": "ok"}
+
+
+@app.get("/version")
+def version():
+    return {"version": "1.1.0"}
